@@ -23,6 +23,7 @@ public:
         if(direction=="right") return moveRight();
         if(direction=="up") return moveUp();
         if(direction=="down") return moveDown();
+        return false;
     }
     bool isOver() const;
     int getPoints() const;
