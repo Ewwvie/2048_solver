@@ -224,4 +224,22 @@ for(int i=0; i<4; i++){
 
 }
 
+bool Board::isOver() const{
+if(noEmpty()){
+    return false;
+}
+ 
+for(int i=0;i<4;i++){
+    for(int j=0; j<4;j++){
+        if(j<3 && cells[i][j]==cells[i][j+1]){
+            return false;
+        }
+        if(i<3 && cells[i][j]==cells[i+1][j] ){
+            return false;
+        }
+    }
+}
+return true;
+}
+
 
