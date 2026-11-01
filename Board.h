@@ -27,6 +27,7 @@ public:
     }
     bool isOver() const;
     int getPoints() const;
+    void sendBoard() const;
 };
 
 #endif

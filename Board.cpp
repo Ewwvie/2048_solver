@@ -242,4 +242,13 @@ for(int i=0;i<4;i++){
 return true;
 }
 
+void Board::sendBoard() const{
+for(int i=0; i<4;i++){
+    for(int j=0;j<4;j++){
+        cout<<cells[i][j]<<" ";
+    }
+}
+cout<<endl;
+}
+
 
