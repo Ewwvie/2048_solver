@@ -7,6 +7,7 @@
 class Board {
 private:
     int cells[4][4];
+    int score;
     std::mt19937 rng;
     bool moveLeft();
     bool moveRight();
