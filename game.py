@@ -118,3 +118,27 @@ def get_moves(board):
             moves[direction]=new_board
 
     return moves
+
+def get_state(board)
+ empty=[]
+ for i in range(4):
+    for j in range (4):
+       if board[i][j]==0:
+        empty.append((i,j))
+ if not empty:
+     return[
+     ]
+ states=[
+ ]
+ n=len(empty)
+ for i,j in empty:
+     board2=[row[:] for row in board]
+     baord2[i][j]=2
+     states.append((.9/n),baord2)
+     
+     board4=[row[:] for row in board]
+     board4[i][j]=4
+     states.append((0.1/n),board4)
+     
+ return states 
+ 
