@@ -11,7 +11,7 @@ int main() {
 
     while (true) {
         if (board.isOver()) {
-            cout << "over" << endl;
+            cout<<"over "<<board.getScore()<<endl;
             break;
         }
         board.sendBoard();

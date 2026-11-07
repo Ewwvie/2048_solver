@@ -56,6 +56,7 @@ int j = 0;
     if ((j + 1) < x.size() &&
         x[j] == x[j +1]) {
         y.push_back(x[j] * 2);
+        score+=x[j]*2;
             j += 2;
         }
             else {
@@ -94,6 +95,7 @@ int j = 0;
     if ((j + 1) < x.size() &&
         x[j] == x[j + 1]) {
         y.push_back(x[j] * 2);
+        score+=x[j]*2;
             j += 2;
         }
             else {
@@ -136,6 +138,7 @@ bool Board::moveUp() {
             if ((i + 1) < x.size() &&
                 x[i] == x[i + 1]) {
                 y.push_back(x[i] * 2);
+                score+=x[i]*2;
                 i += 2;
             }
             else {
@@ -181,6 +184,7 @@ bool Board::moveDown() {
             if ((i + 1) < x.size() &&
                 x[i] == x[i + 1]) {
                 y.push_back(x[i] * 2);
+                score+=x[i]*2;
                 i += 2;
             }
             else {
@@ -249,6 +253,9 @@ for(int i=0; i<4;i++){
     }
 }
 cout<<endl;
+ cout<<"score "<<score<<endl;
 }
 
-
+int Board::getScore() const{
+    return score;
+}

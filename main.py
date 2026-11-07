@@ -24,25 +24,34 @@ def get_board(process):
         board_nums[j:j+4]
         for j in range(0,16,4)
     ]
-    return board
+    
+    score_line=process.stdout.readline()
+    score=int(score_line.split()[1])
+    return board,score
+
+def print_board(board):
+    print("\n"+"-"*25)
+    for row in board:
+        print("|".join(f"{x:^5}" if x else "  .  " for x in row))
+    print("-"*25)
 
 def main():
     process=start()
     
     try:
         while True:
-            board=get_board(process)
+            board,score=get_board(process)
             
             if board is None:
              print("Over")
              break
-        
+            print("Score:",score)
+            print_board(board)
             dir=best_move(board,3)
         
             if dir is None:
              break
         
-            print(dir)
             process.stdin.write(dir+"\n")
             process.stdin.flush()
         

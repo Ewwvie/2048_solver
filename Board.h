@@ -7,7 +7,7 @@
 class Board {
 private:
     int cells[4][4];
-    int score;
+    int score=0;
     std::mt19937 rng;
     bool moveLeft();
     bool moveRight();
@@ -29,6 +29,7 @@ public:
     bool isOver() const;
     int getPoints() const;
     void sendBoard() const;
+    int getScore() const;
 };
 
 #endif
