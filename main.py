@@ -15,17 +15,24 @@ def get_board(process):
     line=process.stdout.readline()
     
     if not line:
-        return None
-    if line.strip()=="over":
-        return None
-    
+        return None, None
+    line =line.strip()
+     
+    if line.startswith("over"):
+         parts=line.split()
+         score=int(parts[1]) if len(parts)>1 else 0
+         return None,score
+
     board_nums= [int(i) for i in line.split()]
     board=[
         board_nums[j:j+4]
         for j in range(0,16,4)
     ]
     
-    score_line=process.stdout.readline()
+    score_line=process.stdout.readline().strip()
+    
+    if not score_line.startswith("score "):
+        raise ValueError(f"Expected score line, received: {score_line}")
     score=int(score_line.split()[1])
     return board,score
 
