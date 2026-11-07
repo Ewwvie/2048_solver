@@ -1,5 +1,6 @@
 import subprocess
-
+from game import get_state,get_moves
+from solver import best_move
 def start():
     process = subprocess.Popen(
         ["./solver"],
@@ -36,11 +37,15 @@ def main():
              print("Over")
              break
         
-        print("Board:")
-        for row in board:
-            print(row)
+            dir=best_move(board,3)
         
-        direction=input("Enter move:").lower()
+            if dir is None:
+             break
+        
+            print(dir)
+            process.stdin.write(dir+"\n")
+            process.stdin.flush()
+        
         
     finally:
         if process.poll() is None:

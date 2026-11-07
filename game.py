@@ -134,11 +134,11 @@ def get_state(board):
  for i,j in empty:
      board2=[row[:] for row in board]
      board2[i][j]=2
-     states.append((.9/n),board2)
+     states.append((.9/n,board2))
      
      board4=[row[:] for row in board]
      board4[i][j]=4
-     states.append((0.1/n),board4)
+     states.append((0.1/n,board4))
      
  return states 
  
