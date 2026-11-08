@@ -31,7 +31,7 @@ def expectimax(board,d,max):
 
         
 
-def best_move(board,d=3):
+def best_move(board,d=2):
     move=get_moves(board)
     if not move:
         return None

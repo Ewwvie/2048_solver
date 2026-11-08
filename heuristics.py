@@ -1,10 +1,10 @@
 import math
 from functools import lru_cache
 weights={
-    "emptiness": 270,
-    "mono": 47,
-    "smoothness":11,
-    "merging":700
+    "emptiness": 200,
+    "mono": 80,
+    "smoothness":20,
+    "merging":600
 }
 @lru_cache(maxsize=None)
 def  log_B2(tile):

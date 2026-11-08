@@ -1,0 +1,18 @@
+{
+    "depth": 2,
+    "total_games": 5,
+    "average_score": 8141.6,
+    "median_score": 7168,
+    "highest_score": 14348,
+    "average_max_tile": 0,
+    "highest_tile": 0,
+    "success_rate_2048": 0.0,
+    "average_game_duration": 9.685000404715537e-05,
+    "average_moves": 536,
+    "total_moves": 2680,
+    "average_decision_latency_ms": 0.3936310121511568,
+    "median_decision_latency_ms": 0.3746874863281846,
+    "p95_decision_latency_ms": 0.712500186637044,
+    "total_decisions": 2680,
+    "games_per_second": 10325.244793104079
+}
